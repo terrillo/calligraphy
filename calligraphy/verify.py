@@ -103,5 +103,3 @@ def verify(log=True):
         return False
 
     return True
-
-verify()
