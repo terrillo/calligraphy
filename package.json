@@ -6,6 +6,7 @@
   "author": "Terrillo Walls <terrillo@terrillo.com>",
   "license": "MIT",
   "scripts": {
-    "release": "python3 ./calligraphy_utils/release.py"
+    "release": "python3 ./calligraphy_utils/release.py",
+    "verify": "python3 ./calligraphy_utils/verify.py"
   }
 }

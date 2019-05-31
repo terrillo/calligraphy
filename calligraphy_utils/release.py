@@ -3,7 +3,7 @@ import os
 
 from verify import *
 
-verified = verify()
+verified = verify(False)
 
 if verified:
     packagedJson = json.load(open('./package.json'))
