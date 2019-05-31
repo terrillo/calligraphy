@@ -6,6 +6,6 @@
   "author": "Terrillo Walls <terrillo@terrillo.com>",
   "license": "MIT",
   "scripts": {
-    "release": "node ./utils/release.js"
+    "release": "node ./calligraphy_utils/release.js"
   }
 }
