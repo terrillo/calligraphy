@@ -7,6 +7,8 @@
   "license": "MIT",
   "scripts": {
     "release": "python3 ./calligraphy_utils/release.py",
-    "verify": "python3 ./calligraphy_utils/verify.py"
+    "verify": "python3 ./calligraphy_utils/verify.py",
+    "render": "python3 ./calligraphy_utils/render.py",
+    "dev": "python3 ./calligraphy_utils/render.py && http-server ./dist"
   }
 }

@@ -1,0 +1,22 @@
+
+<section class="mw7 center">
+  <h2 class="athelas ph3 ph0-l">{{site_name}}</h2>
+
+  {% for post in posts %}
+    <article class="pv4 bt bb b--black-10 ph3 ph0-l">
+      <div class="flex flex-column flex-row-ns">
+        <div class="w-100 pr3-ns order-2 order-1-ns">
+          <a href="/posts/{{ post.slug }}">
+          <h1 class="f3 athelas mt0 lh-title">{{ post.title }}</h1>
+          </a>
+          <p class="f5 f4-l lh-copy athelas">
+            {{ post.summary }}
+          </p>
+        </div>
+      </div>
+      <p class="f6 lh-copy gray mv0">By <span class="ttu">{{ post.author }}</span></p>
+      <time class="f6 db gray">{{ post.date }}</time>
+    </article>
+  {% endfor %}
+
+</section>
