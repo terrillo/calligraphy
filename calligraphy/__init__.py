@@ -13,9 +13,11 @@ def cli():
 
     if 'verify' in sys.argv:
         verify()
+        print("DONE!")
 
     if 'render' in sys.argv:
         render()
+        print("DONE!")
 
 # def static():
 #     #!/usr/bin/env python3
