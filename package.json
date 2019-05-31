@@ -1,11 +1,11 @@
 {
   "name": "calligraphy-cms",
-  "version": "0.9.0",
+  "version": "0.1.0",
   "main": "index.js",
   "repository": "git@github.com:terrillo/calligraphy-cms.git",
   "author": "Terrillo Walls <terrillo@terrillo.com>",
   "license": "MIT",
   "scripts": {
-    "release": "node ./calligraphy_utils/release.js"
+    "release": "python3 ./calligraphy_utils/release.py"
   }
 }

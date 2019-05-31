@@ -1,1 +1,9 @@
+.serverless
+*.pyc
+*.pyo
+node_modules
 .DS_Store
+__pycache__
+bin
+lib
+include
