@@ -1,5 +1,4 @@
 bleach==3.1.0
--e git+git@github.com:terrillo/calligraphy-cms.git@cb02e7f87e1f0a5576356f870865abf8b8f01e2a#egg=calligraphy
 certifi==2019.3.9
 chardet==3.0.4
 Click==7.0
