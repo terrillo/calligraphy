@@ -1,9 +1,9 @@
 import os
 import sys
 
-from calligraphy.utils import *
-from calligraphy.verify import *
-from calligraphy.export import *
+from .utils import *
+from .verify import *
+from .export import *
 
 def cli():
 
