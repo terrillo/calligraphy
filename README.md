@@ -26,7 +26,7 @@ $ calligraphy verify
 
 ---
 
-### Deploy (TODO)
+### Deploy
 Builds the landing and each blog post into a static `dist` directory 
 
 Export to html (defualt)
@@ -35,7 +35,7 @@ Export to html (defualt)
 $ calligraphy export 
 ```
 
-Deploy to AWS S3
+Deploy to AWS S3 (TODO)
 
 ```shell
 $ calligraphy export --format=s3 --bucket=s3://example.com
