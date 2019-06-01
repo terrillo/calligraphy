@@ -3,7 +3,7 @@ import sys
 
 from calligraphy.utils import *
 from calligraphy.verify import *
-from calligraphy.render import *
+from calligraphy.export import *
 
 def cli():
 
@@ -15,8 +15,8 @@ def cli():
         verify()
         print("DONE!")
 
-    if 'render' in sys.argv:
-        render()
+    if 'export' in sys.argv:
+        export()
         print("DONE!")
 
 # def static():

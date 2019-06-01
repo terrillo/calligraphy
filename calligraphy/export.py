@@ -3,7 +3,7 @@ from jinja2 import Template
 
 from calligraphy.verify import *
 
-def render():
+def export():
     verified = verify(False)
     if verified:
         if not os.path.isdir('./dist'):
