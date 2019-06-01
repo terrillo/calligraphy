@@ -1,7 +1,7 @@
 # Calligraphy CMS
 A static blog generator
 
-## Install (TODO)
+## Install
 ```bash
 $ pip install calligraphy
 ```
@@ -14,7 +14,7 @@ $ pip3 install --editable .
 $ calligraphy
 ```
 
-## Methods 
+## Methods
 
 ### Verify
 
@@ -27,12 +27,12 @@ $ calligraphy verify
 ---
 
 ### Deploy (TODO)
-Builds the landing and each blog post into a static `dist` directory 
+Builds the landing and each blog post into a static `dist` directory
 
 Export to html (defualt)
 
 ```shell
-$ calligraphy export 
+$ calligraphy export
 ```
 
 Deploy to AWS S3
@@ -40,4 +40,3 @@ Deploy to AWS S3
 ```shell
 $ calligraphy export --format=s3 --bucket=s3://example.com
 ```
-
