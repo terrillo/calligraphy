@@ -5,3 +5,5 @@ include
 .DS_Store
 *.egg-info
 pyvenv.cfg
+dist
+build

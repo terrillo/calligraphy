@@ -6,10 +6,10 @@ from calligraphy.verify import *
 def export():
     verified = verify(False)
     if verified:
-        if not os.path.isdir('./dist'):
-            os.system("mkdir ./dist")
-        if not os.path.isdir('./dist/posts'):
-            os.system("mkdir ./dist/posts")
+        if not os.path.isdir('./html'):
+            os.system("mkdir ./html")
+        if not os.path.isdir('./html/posts'):
+            os.system("mkdir ./html/posts")
         site_file = yaml.load(open('./site.yml', 'r'), Loader=yaml.FullLoader)
         site_file['posts'] = []
 
@@ -31,7 +31,7 @@ def export():
                 # Single page
                 post_template = Template(open('./themes/%s/single.html' % (site_file['theme'])).read())
                 slug = path.replace(' ', '-').replace(' ', '--').replace('.yml', '')
-                file = open("./dist/posts/%s.html" % (slug),"w")
+                file = open("./html/posts/%s.html" % (slug),"w")
                 file.write(header + post_template.render(post) + footer)
 
                 # Homepage
@@ -39,7 +39,7 @@ def export():
                 map['index']['data']['posts'].append(post)
 
         for page in pages:
-            file = open("./dist/%s.html" % (page),"w")
+            file = open("./html/%s.html" % (page),"w")
             file.write(header + map[page]['template'].render(map[page]['data']) + footer)
     else:
         print(verified)

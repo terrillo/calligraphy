@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='calligraphy',
-    version='0.2.0',
+    version='0.3.0',
     author="Terrillo Walls",
     author_email="terrillo@terrillo.com",
     url="https://github.com/terrillo/calligraphy",
