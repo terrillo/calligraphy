@@ -14,9 +14,10 @@ Help:
   https://github.com/rdegges/skele-cli
 """
 
+import os
+import sys
 
 from inspect import getmembers, isclass
-
 from docopt import docopt
 
 from . import __version__ as VERSION
@@ -25,6 +26,11 @@ def main():
     """Main CLI entrypoint."""
     import calligraphy.commands
     options = docopt(__doc__, version=VERSION)
+
+    # Look for project
+    if not os.path.isfile('./site.yml'):
+        console_error('Not a "Calligraphy" project!')
+        sys.exit()
 
     # Dynamically match the command
     for (k, v) in options.items():
