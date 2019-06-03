@@ -26,7 +26,7 @@ $ calligraphy verify
 
 ---
 
-### Deploy
+### Export to html
 Builds the landing and each blog post into a static `html` directory
 
 Export to html (default)
