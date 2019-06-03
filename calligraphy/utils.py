@@ -7,9 +7,12 @@ class bcolors:
     ENDC = '\033[0m'
     BOLD = '\033[1m'
     UNDERLINE = '\033[4m'
-    
+
 def console_error(text):
     print(bcolors.FAIL + str(text) + bcolors.ENDC)
 
 def console_warn(text):
     print(bcolors.WARNING + str(text) + bcolors.ENDC)
+
+def console_success(text):
+    print(bcolors.OKGREEN + str(text) + bcolors.ENDC)

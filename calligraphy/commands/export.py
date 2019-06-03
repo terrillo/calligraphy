@@ -2,10 +2,13 @@
 
 from json import dumps
 
-from .base import Base
+from . import Calligraphy
 
-class Export(Base):
+class Export(Calligraphy):
     """Say hello, world!"""
 
     def run(self):
-        print('Hello, world!')
+        print('You supplied the following options:', dumps(self.options, indent=2, sort_keys=True))
+        print('>>>>>')
+        Calligraphy.export(self)
+        print('>>>>>')

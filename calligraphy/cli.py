@@ -1,12 +1,14 @@
 """
 calligraphy
 Usage:
+  calligraphy verify
   calligraphy export
   calligraphy -h | --help
   calligraphy --version
 Options:
   -h --help                         Show this screen.
   --version                         Show version.
+  --
 Examples:
   calligraphy export
 Help:
@@ -21,6 +23,7 @@ from inspect import getmembers, isclass
 from docopt import docopt
 
 from . import __version__ as VERSION
+from .utils import *
 
 def main():
     """Main CLI entrypoint."""
@@ -37,6 +40,6 @@ def main():
         if hasattr(calligraphy.commands, k) and v:
             module = getattr(calligraphy.commands, k)
             calligraphy.commands = getmembers(module, isclass)
-            command = [command[1] for command in calligraphy.commands if command[0] != 'Base'][0]
+            command = [command[1] for command in calligraphy.commands if command[0] != 'Calligraphy'][0]
             command = command(options)
             command.run()
