@@ -50,3 +50,8 @@ $ calligraphy static --port=8088
 - [ ] Theme documentation
 - [ ] 404 template
 - [ ] Tags
+
+---
+
+## THEMES
+- [calligraphy-tachyons](https://github.com/terrillo/calligraphy-tachyons)
