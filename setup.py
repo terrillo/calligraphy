@@ -12,10 +12,10 @@ if __name__ == "__main__":
         long_description=open("README.md").read(),
         long_description_content_type="text/markdown",
         install_requires=[
-            'pyyaml',
+            'PyYAML==3.13',
             'Jinja2>=2.10.1',
-            'docopt',
-            'Flask'
+            'docopt==0.6.2',
+            'Flask==1.0.3'
         ],
         project_urls={
             "Bug Tracker": "https://github.com/terrillo/calligraphy/issues",
