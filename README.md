@@ -3,7 +3,7 @@ A static blog generator
 
 ## Install
 ```bash
-$ pip install calligraphy
+$ pip3 install calligraphy
 ```
 
 ## Development
@@ -44,3 +44,9 @@ Run a static version of website
 $ calligraphy static
 $ calligraphy static --port=8088
 ```
+
+## Todo
+- [ ] Markdown parser
+- [ ] Theme documentation
+- [ ] 404 template
+- [ ] Tags
