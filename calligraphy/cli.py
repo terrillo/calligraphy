@@ -3,17 +3,19 @@ calligraphy
 Usage:
   calligraphy verify
   calligraphy export
+  calligraphy static
+  calligraphy static --port=<number>
   calligraphy -h | --help
   calligraphy --version
 Options:
   -h --help                         Show this screen.
   --version                         Show version.
-  --
+  --port=<number>                   HTTP port [default: 8080].
 Examples:
   calligraphy export
 Help:
   For help using this tool, please open an issue on the Github repository:
-  https://github.com/rdegges/skele-cli
+  https://github.com/terrillo/calligraphy
 """
 
 import os

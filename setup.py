@@ -14,7 +14,8 @@ if __name__ == "__main__":
         install_requires=[
             'pyyaml',
             'Jinja2>=2.10.1',
-            'docopt'
+            'docopt',
+            'Flask'
         ],
         project_urls={
             "Bug Tracker": "https://github.com/terrillo/calligraphy/issues",

@@ -3,6 +3,12 @@ import sys
 from jinja2 import Template
 import yaml
 
+from flask import Flask
+StaticServer = Flask(__name__, root_path='html')
+StaticServer.jinja_env.cache = {}
+StaticServer.jinja_env.auto_reload = True
+StaticServer.config['TEMPLATES_AUTO_RELOAD'] = True
+
 from ..utils import *
 
 class Calligraphy(object):
@@ -97,12 +103,11 @@ class Calligraphy(object):
 
         return True
 
-    def export(self):
+    def export(self, yell=True):
         if self.verify():
-            if not os.path.isdir('./html'):
-                os.system("mkdir ./html")
-            if not os.path.isdir('./html/posts'):
-                os.system("mkdir ./html/posts")
+            os.system("rm -rf ./html")
+            os.system("mkdir ./html")
+            os.system("mkdir ./html/posts")
             self.config['posts'] = []
 
             header = Template(open('./themes/%s/_header.html' % (self.config['theme'])).read()).render(self.config)
@@ -133,9 +138,11 @@ class Calligraphy(object):
             for page in pages:
                 file = open("./html/%s.html" % (page),"w")
                 file.write(header + map[page]['template'].render(map[page]['data']) + footer)
-            console_success("Export: success")
+            if yell:
+                console_success("Export: success")
         else:
-            console_error("Export: failed")
+            if yell:
+                console_error("Export: failed")
 
         return True
 
@@ -144,3 +151,4 @@ class Calligraphy(object):
 
 from .export import *
 from .verify import *
+from .static import *

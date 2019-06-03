@@ -34,3 +34,13 @@ Export to html (default)
 ```shell
 $ calligraphy export
 ```
+
+---
+
+### Static
+Run a static version of website
+
+```shell
+$ calligraphy static
+$ calligraphy static --port=8088
+```
