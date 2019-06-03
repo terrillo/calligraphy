@@ -7,3 +7,4 @@ include
 pyvenv.cfg
 dist
 build
+html
