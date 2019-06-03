@@ -1,23 +1,22 @@
-import os
-import sys
+__version__ = '0.7.0'
+# import os
+# import sys
+#
+# from .utils import *
+# from .verify import *
+# from .export import *
 
-from .utils import *
-from .verify import *
-from .export import *
-
-def cli():
-
-    if not os.path.isfile('./site.yml'):
-        console_error('Not a "Calligraphy" project!')
-        sys.exit()
-
-    if 'verify' in sys.argv:
-        verify()
-        print("DONE!")
-
-    if 'export' in sys.argv:
-        export()
-        print("DONE!")
+# __version__ = '0.7.0'
+#
+# class Calligraphy:
+#
+#     def __init__(self):
+#         self.info = json.loads(open('..open.json').read())
+#
+#     @property
+#     def info(self):
+#         return self.info
+#
 
 # def static():
 #     #!/usr/bin/env python3

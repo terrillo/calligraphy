@@ -1,9 +1,10 @@
 import setuptools
+from calligraphy import __version__ as VERSION
 
 if __name__ == "__main__":
     setuptools.setup(
         name='calligraphy',
-        version='0.7.0',
+        version=VERSION,
         author="Terrillo Walls",
         author_email="terrillo@terrillo.com",
         url="https://github.com/terrillo/calligraphy",
@@ -12,7 +13,8 @@ if __name__ == "__main__":
         long_description_content_type="text/markdown",
         install_requires=[
             'pyyaml',
-            'Jinja2>=2.10.1'
+            'Jinja2>=2.10.1',
+            'docopt'
         ],
         project_urls={
             "Bug Tracker": "https://github.com/terrillo/calligraphy/issues",
@@ -27,6 +29,8 @@ if __name__ == "__main__":
             "Operating System :: OS Independent",
         ],
         entry_points = {
-            'console_scripts': ['calligraphy=calligraphy:cli'],
+            'console_scripts': [
+                'calligraphy=calligraphy.cli:main'
+            ],
         }
     )
