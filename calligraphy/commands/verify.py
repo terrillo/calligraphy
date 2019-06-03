@@ -2,10 +2,12 @@
 
 from json import dumps
 
+from ..utils import *
 from . import Calligraphy
 
 class Verify(Calligraphy):
     """Say hello, world!"""
 
     def run(self):
-        Calligraphy.verify(self)
+        if Calligraphy.verify(self):
+            console_success("Verification: success")

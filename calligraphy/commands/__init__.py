@@ -94,12 +94,15 @@ class Calligraphy(object):
         if not post_veify:
             return False
 
-        console_success("Verification: passed")
-
         return True
 
     def export(self):
-        print("YO")
+        if self.verify():
+            console_success("Export: success")
+        else:
+            console_error("Export: failed")
+
+
         return True
 
     def run(self):
