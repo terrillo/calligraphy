@@ -3,7 +3,7 @@ A static blog generator
 
 ## Install
 ```bash
-$ pip3 install calligraphy
+$ pip3 install calligraphy -U
 ```
 
 ## Development
