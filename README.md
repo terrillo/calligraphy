@@ -34,9 +34,3 @@ Export to html (default)
 ```shell
 $ calligraphy export
 ```
-
-Deploy to AWS S3 (TODO)
-
-```shell
-$ calligraphy export --format=s3 --bucket=s3://example.com
-```

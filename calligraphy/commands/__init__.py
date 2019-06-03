@@ -1,5 +1,6 @@
 import os
 import sys
+from jinja2 import Template
 import yaml
 
 from ..utils import *
@@ -102,26 +103,25 @@ class Calligraphy(object):
                 os.system("mkdir ./html")
             if not os.path.isdir('./html/posts'):
                 os.system("mkdir ./html/posts")
-            site_file = yaml.load(open('./site.yml', 'r'), Loader=yaml.FullLoader)
-            site_file['posts'] = []
+            self.config['posts'] = []
 
-            header = Template(open('./themes/%s/_header.html' % (site_file['theme'])).read()).render(site_file)
-            footer = Template(open('./themes/%s/_footer.html' % (site_file['theme'])).read()).render(site_file)
+            header = Template(open('./themes/%s/_header.html' % (self.config['theme'])).read()).render(self.config)
+            footer = Template(open('./themes/%s/_footer.html' % (self.config['theme'])).read()).render(self.config)
 
             map = {
                 'index': {
-                    'template': Template(open('./themes/%s/index.html' % (site_file['theme'])).read()),
-                    'data': site_file,
+                    'template': Template(open('./themes/%s/index.html' % (self.config['theme'])).read()),
+                    'data': self.config,
                 }
             }
             pages = map.keys()
             for path in os.listdir('./posts/published'):
                 if '.yml' in path and not path == '_template.yml':
-                    post = yaml.load(open('./posts/published/'+path, 'r'), Loader=yaml.FullLoader)
+                    post = yaml.load(open('./posts/published/'+path, 'r'))
                     post['body'] = '<p></p>'.join(post['body'].split('\n'))
 
                     # Single page
-                    post_template = Template(open('./themes/%s/single.html' % (site_file['theme'])).read())
+                    post_template = Template(open('./themes/%s/single.html' % (self.config['theme'])).read())
                     slug = path.replace(' ', '-').replace(' ', '--').replace('.yml', '')
                     file = open("./html/posts/%s.html" % (slug),"w")
                     file.write(header + post_template.render(post) + footer)
