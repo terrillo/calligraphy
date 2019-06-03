@@ -54,7 +54,7 @@ class Calligraphy(object):
         for path in os.listdir('./posts/published'):
             if '.yml' in path:
                 try:
-                    parse = yaml.load(open('./posts/published/'+path, 'r'))
+                    parse = yaml.load(open('./posts/published/'+path, 'r'), Loader=yaml.FullLoader)
                 except:
                     if log:
                         console_error('Blog post: "%s" is an invalid yaml file.' % (path))
@@ -122,7 +122,7 @@ class Calligraphy(object):
             pages = map.keys()
             for path in os.listdir('./posts/published'):
                 if '.yml' in path and not path == '_template.yml':
-                    post = yaml.load(open('./posts/published/'+path, 'r'))
+                    post = yaml.load(open('./posts/published/'+path, 'r'), Loader=yaml.FullLoader)
                     post['body'] = '<p></p>'.join(post['body'].split('\n'))
 
                     # Single page

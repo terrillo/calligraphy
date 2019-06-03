@@ -12,7 +12,7 @@ if __name__ == "__main__":
         long_description=open("README.md").read(),
         long_description_content_type="text/markdown",
         install_requires=[
-            'PyYAML==3.13',
+            'PyYAML>=3.10',
             'Jinja2>=2.10.1',
             'docopt==0.6.2',
             'Flask==1.0.3'

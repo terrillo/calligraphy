@@ -6,4 +6,4 @@ class Export(Calligraphy):
     """Say hello, world!"""
 
     def run(self):
-        Calligraphy.export(self, False)
+        Calligraphy.export(self)
