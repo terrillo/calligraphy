@@ -15,7 +15,7 @@ if __name__ == "__main__":
             'PyYAML>=3.10',
             'Jinja2>=2.10.1',
             'docopt==0.6.2',
-            'Flask==1.0.3'
+            'Flask==2.3.2'
         ],
         project_urls={
             "Bug Tracker": "https://github.com/terrillo/calligraphy/issues",
